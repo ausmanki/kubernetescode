@@ -8,11 +8,10 @@ node {
     }
 
     stage('Build image') {
-  
-       docker run -d -t -w /$PWD -v /$PWD:/$PWD .......
+        environment {
+                  HOME="."
        app = docker.build("ausmanki/test")
-       HOME="."
-
+        }
     }
 
     stage('Test image') {
