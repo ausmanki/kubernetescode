@@ -9,6 +9,7 @@ node {
 
     stage('Build image') {
   
+       docker run -d -t -w /$PWD -v /$PWD:/$PWD .......
        app = docker.build("ausmanki/test")
        HOME="."
 
