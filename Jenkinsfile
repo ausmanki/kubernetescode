@@ -10,6 +10,8 @@ node {
     stage('Build image') {
   
        app = docker.build("ausmanki/test")
+       HOME="."
+
     }
 
     stage('Test image') {
