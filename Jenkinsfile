@@ -8,7 +8,8 @@ node {
     }
 
     stage('Build image') {
-      
+       
+      customImage = docker.build("my-image:${env.BUILD_ID}")
        app = docker.build("ausmanki/test")
         }
 
