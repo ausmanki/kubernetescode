@@ -8,11 +8,9 @@ node {
     }
 
     stage('Build image') {
-        environment {
-                  HOME="."
+      
        app = docker.build("ausmanki/test")
         }
-    }
 
     stage('Test image') {
   
